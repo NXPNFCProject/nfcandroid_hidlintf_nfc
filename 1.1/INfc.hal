@@ -15,7 +15,7 @@
  */
 package android.hardware.nfc@1.1;
 
-import @1.0::INfcClientCallback;
+import @1.1::INfcClientCallback;
 import @1.0::INfc;
 import @1.0::NfcStatus;
 
@@ -23,7 +23,7 @@ interface INfc extends @1.0::INfc {
     /**
      * Clears the NFC chip.
      *
-     * Must be called during factory reset and before the first time the HAL is
+     * Must be called during factory reset and/or before the first time the HAL is
      * initialized after a factory reset
      */
     factoryReset();
@@ -40,4 +40,13 @@ interface INfc extends @1.0::INfc {
      * @return NfcStatus::OK on success and NfcStatus::FAILED on error.
      */
     closeForPowerOffCase() generates (NfcStatus status);
+
+    /**
+     * Open call to take the @1.1::INfcClientCallback
+     *
+     * @param clientCallback for sending events and data to client.
+     * @return status NfcStatus::FAILED in case of error,
+     *                NfcStatus::SUCCESS otherwise.
+     */
+    open_1_1(INfcClientCallback clientCallback) generates (NfcStatus status);
 };

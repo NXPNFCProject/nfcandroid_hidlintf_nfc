@@ -9,6 +9,7 @@ hidl_interface {
     srcs: [
         "types.hal",
         "INfc.hal",
+        "INfcClientCallback.hal",
     ],
     interfaces: [
         "android.hardware.nfc@1.0",
@@ -17,6 +18,6 @@ hidl_interface {
     types: [
         "NfcEvent",
     ],
-    gen_java: false,
+    gen_java: true,
 }
 

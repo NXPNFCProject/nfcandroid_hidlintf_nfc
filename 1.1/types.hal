@@ -80,6 +80,9 @@ struct NfcConfig {
     /** Default power state for system code route. 0x00 if there aren't any. Refer NCI spec */
     uint8_t defaultSystemCodePowerState;
 
+    /** Default system code route. 0x00 if there aren't any. Refer NCI spec */
+    vec<uint8_t> defaultSystemCode;
+
     /**
      * Default route for all remaining protocols and technology which haven't
      * been configured.

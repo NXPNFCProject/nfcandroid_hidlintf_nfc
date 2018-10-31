@@ -120,12 +120,4 @@ struct NfcConfig {
 
     /** delay to wait when DH received eSe low temp error */
     uint8_t eSeLowTempErrorDelay ;
-    /** Force P2P to listen for a selected technology(s) */
-    uint8_t p2pListenTechMask;
-    /** Forcing HOST to listen for a selected protocol */
-    uint8_t hostListenTechMask;
-    /** Force UICC to listen for a selected technology(s) */
-    uint8_t uiccListenTechMask;
-    /** Force tag polling for the selected technology(s) */
-    uint8_t pollingTechMask;
 };

@@ -117,7 +117,4 @@ struct NfcConfig {
 
     /** list of white listed host ids, as per ETSI TS 102 622 */
     vec<uint8_t> hostWhitelist;
-
-    /** delay to wait when DH received eSe low temp error */
-    uint8_t eSeLowTempErrorDelay ;
 };
